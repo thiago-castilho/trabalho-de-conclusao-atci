@@ -1,0 +1,30 @@
+{
+  "name": "trabalho-de-conclusao-atci",
+  "version": "1.0.0",
+  "description": "Trabalho de conclusão da disciplina Automação de Testes na Camada de Interface (Web).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:repeat": "npx cypress-repeat run -n 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiago-castilho/trabalho-de-conclusao-atci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/thiago-castilho/trabalho-de-conclusao-atci/issues"
+  },
+  "homepage": "https://github.com/thiago-castilho/trabalho-de-conclusao-atci#readme",
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "cypress": "^16.2.0"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^5.0.0",
+    "cypress-repeat": "^2.3.10"
+  }
+}

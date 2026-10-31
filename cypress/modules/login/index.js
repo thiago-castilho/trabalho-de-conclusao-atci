@@ -3,6 +3,7 @@ const seletores = {
   inputSenha: '[data-qa="login-password"]',
   botaoLogin: '[data-qa="login-button"]',
   usuarioAutenticado: '.navbar-nav a',
+  mensagemDeErro: '.login-form p',
 }
 
 function acessarLogin() {
@@ -21,8 +22,14 @@ function validarUsuarioAutenticado(nome) {
     .and('contain', nome);
 }
 
+function validarMensagemDeErro(mensagem) {
+  cy.contains(seletores.mensagemDeErro, mensagem)
+    .should('be.visible');
+}
+
 module.exports = {
   acessarLogin,
   efetuarLogin,
   validarUsuarioAutenticado,
+  validarMensagemDeErro,
 }

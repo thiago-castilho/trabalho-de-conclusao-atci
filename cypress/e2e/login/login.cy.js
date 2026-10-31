@@ -8,4 +8,10 @@ describe('Testes de login', () => {
     login.validarUsuarioAutenticado(usuario.usuario_cadastrado.nome);
   });
 
+  it('Test Case 3: Login User with incorrect email and password', () => {
+    login.acessarLogin();
+    login.efetuarLogin(usuario.usuario_nao_cadastrado.email, usuario.usuario_nao_cadastrado.senha);
+    login.validarMensagemDeErro('Your email or password is incorrect!');
+  });
+
 });

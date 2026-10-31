@@ -4,5 +4,24 @@
     "senha": "trabalhofinal#123",
     "nome": "Thiago",
     "sobrenome": "Castilho"
+  },
+  "usuario_nao_cadastrado": {
+    "primeiroNome": "Usuario",
+    "sobrenome": "Nao Cadastrado",
+    "email": "usuario@naocadastrado.com.br",
+    "genero": "male",
+    "senha": "usuario#123",
+    "dia": "6",
+    "mes": "November",
+    "ano": "1996",
+    "newsletter": false,
+    "specialOffers": false,
+    "empresa": "Empresa de Teste",
+    "endereco": "Rua 1",
+    "pais": "United States",
+    "estado": "California",
+    "cidade": "San Francisco",
+    "cep": "94016",
+    "telefone": "11999999999"
   }
 }

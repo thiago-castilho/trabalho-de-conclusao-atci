@@ -23,6 +23,7 @@ const seletores = {
   inputTelefone: '[data-qa="mobile_number"]',
   botaoCreateAccount: '[data-qa="create-account"]',
   mensagemDeSucesso: '[data-qa="account-created"]',
+  botaoContinue: '[data-qa="continue-button"]',
 }
 
 function iniciarCadastro(usuario) {
@@ -63,6 +64,7 @@ function validarCadastroRealizado() {
   cy.get(seletores.mensagemDeSucesso)
     .should('be.visible')
     .and('contain', 'Account Created!');
+  cy.get(seletores.botaoContinue).click();
 }
 
 module.exports = {

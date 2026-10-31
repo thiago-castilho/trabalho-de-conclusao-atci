@@ -24,6 +24,7 @@ const seletores = {
   botaoCreateAccount: '[data-qa="create-account"]',
   mensagemDeSucesso: '[data-qa="account-created"]',
   botaoContinue: '[data-qa="continue-button"]',
+  mensagemDeErroEmailExistente: '.signup-form > form > p',
 }
 
 function iniciarCadastro(usuario) {
@@ -67,8 +68,15 @@ function validarCadastroRealizado() {
   cy.get(seletores.botaoContinue).click();
 }
 
+function validarMensagemDeErroEmailExistente() {
+  cy.get(seletores.mensagemDeErroEmailExistente)
+    .should('be.visible')
+    .and('contain', 'Email Address already exist!');
+}
+
 module.exports = {
   iniciarCadastro,
   cadastrarUsuario,
   validarCadastroRealizado,
+  validarMensagemDeErroEmailExistente,
 }

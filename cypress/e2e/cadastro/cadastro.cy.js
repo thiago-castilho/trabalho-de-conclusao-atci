@@ -13,4 +13,10 @@ describe('Testes de cadastro de usuário', () => {
     conta.excluirConta();
     conta.validarContaExcluida();
   });
+
+  it('Test Case 5: Register User with existing email', () => {
+    login.acessarLogin();
+    cadastro.iniciarCadastro(usuario.usuario_cadastrado);
+    cadastro.validarMensagemDeErroEmailExistente();
+  });
 });

@@ -3,7 +3,7 @@ const seletores = {
   inputSenha: '[data-qa="login-password"]',
   botaoLogin: '[data-qa="login-button"]',
   usuarioAutenticado: '.navbar-nav a',
-  mensagemDeErro: '.login-form p',
+  mensagemDeErroEmailOuSenhaIncorretos: '.login-form p',
 }
 
 function acessarLogin() {
@@ -22,8 +22,8 @@ function validarUsuarioAutenticado(nome) {
     .and('contain', nome);
 }
 
-function validarMensagemDeErro(mensagem) {
-  cy.contains(seletores.mensagemDeErro, mensagem)
+function validarMensagemDeErroEmailOuSenhaIncorretos() {
+  cy.contains(seletores.mensagemDeErroEmailOuSenhaIncorretos, 'Your email or password is incorrect!')
     .should('be.visible');
 }
 
@@ -31,5 +31,5 @@ module.exports = {
   acessarLogin,
   efetuarLogin,
   validarUsuarioAutenticado,
-  validarMensagemDeErro,
+  validarMensagemDeErroEmailOuSenhaIncorretos,
 }

@@ -28,7 +28,7 @@ function criarUsuario() {
 }
 
 describe('Testes de cadastro de usuário', () => {
-  it('deve cadastrar um novo usuário', () => {
+  it('Test Case 1: Resgister User', () => {
     const usuario = criarUsuario();
 
     menu.acessarPaginaLoginECadastro();

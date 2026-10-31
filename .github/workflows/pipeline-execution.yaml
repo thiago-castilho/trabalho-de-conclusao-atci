@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Execução dos testes automatizados
-        run: npm run test
+        run: npm run test:ci
 
       - name: Salvando relatório do Cypress
         run: npm run test:ci

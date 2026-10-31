@@ -2,10 +2,16 @@ const seletores = {
   inputDeEmail: '#susbscribe_email',
   botaoDeInscricao: '#subscribe',
   mensagemDeInscricao: '.alert.alert-success',
+  titulo: 'footer h2',
 }
 
 function acessarPaginaDeInscricao() {
   cy.visit('/');
+  validarInscricaoVisivel();
+}
+
+function validarInscricaoVisivel() {
+  cy.get(seletores.titulo).should('be.visible').and('contain', 'Subscription');
 }
 
 function preencherFormularioDeInscricao(email) {

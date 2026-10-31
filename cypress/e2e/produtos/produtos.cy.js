@@ -3,9 +3,15 @@ const produtos = require('../../modules/produtos/index.js');
 const produto = require('../../fixtures/produtos.json');
 
 describe('Testes de produtos', () => {
-  it('Test Case 8: View Product Details', () => {
+  it('Test Case 8: Verify All Products and product detail page', () => {
     produtos.acessarPaginaDeProdutos();
     produtos.visualizarDetalhesDoPrimeiroProduto();
     produtos.validarDetalhesDoPrimeiroProduto(produto.produto_1);
+  });
+
+  it('Test Case 9: Search Product', () => {
+    produtos.acessarPaginaDeProdutos();
+    produtos.pesquisarProduto(produto.produto_1.nome);
+    produtos.validarResultadoDaPesquisa(produto.produto_1.nome);
   });
 });

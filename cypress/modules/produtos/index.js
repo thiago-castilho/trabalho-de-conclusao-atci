@@ -3,11 +3,23 @@ const seletores = {
   listaDeProdutos: '.features_items',
   primeiroProduto: '.features_items .choose a',
   detalhesDoProduto: '.product-information',
+  inputDePesquisa: '#search_product',
+  botaoDePesquisa: '#submit_search',
 }
 
 function acessarPaginaDeProdutos() {
   cy.visit('/products');
   cy.get(seletores.tituloDaPagina).should('be.visible').and('contain', 'All Products');
+}
+
+function pesquisarProduto(nome) {
+  cy.get(seletores.inputDePesquisa).type(nome);
+  cy.get(seletores.botaoDePesquisa).click();
+}
+
+function validarResultadoDaPesquisa(nome) {
+  cy.get(seletores.tituloDaPagina).should('be.visible').and('contain', 'Searched Products');
+  cy.get(seletores.listaDeProdutos).should('be.visible').and('contain', nome);
 }
 
 function visualizarDetalhesDoPrimeiroProduto() {
@@ -28,4 +40,6 @@ module.exports = {
   acessarPaginaDeProdutos,
   visualizarDetalhesDoPrimeiroProduto,
   validarDetalhesDoPrimeiroProduto,
+  pesquisarProduto,
+  validarResultadoDaPesquisa,
 }

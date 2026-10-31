@@ -4,7 +4,8 @@
   "description": "Trabalho de conclusão da disciplina Automação de Testes na Camada de Interface (Web).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cypress open",
+    "test:ci": "cypress run --browser chrome",
     "test:repeat": "npx cypress-repeat run -n 5"
   },
   "repository": {

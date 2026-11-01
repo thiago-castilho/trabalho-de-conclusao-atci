@@ -17,7 +17,7 @@ describe('Testes de pedido', () => {
     pedido.adicionarProdutoAoCarrinho(produto.produto_1.nome);
     pedido.acessarCarrinho();
     pedido.validarProdutoNoCarrinho(produto.produto_1.nome);
-    pedido.clicarNoBotaoDeCheckout();
+    pedido.seguirParaCheckout();
     pedido.validarDetalhesDoEndereco(usuario.usuario_pedido);
     pedido.preencherComentarioEFazerPedido(usuario.usuario_pedido.comentario);
     pedido.preencherDetalhesDoPagamento(pagamento.cartao_de_credito);
@@ -26,5 +26,21 @@ describe('Testes de pedido', () => {
 
     conta.excluirConta();
     conta.validarContaExcluida();
+  });
+
+  it('Test Case 16: Place Order: Login before Checkout', () => {
+    login.acessarLogin();
+    login.efetuarLogin(usuario.usuario_pedido_login.email, usuario.usuario_pedido_login.senha);
+    login.validarUsuarioAutenticado(usuario.usuario_pedido_login.primeiroNome);
+
+    pedido.adicionarProdutoAoCarrinho(produto.produto_1.nome);
+    pedido.acessarCarrinho();
+    pedido.validarProdutoNoCarrinho(produto.produto_1.nome);
+    pedido.seguirParaCheckout();
+    pedido.validarDetalhesDoEndereco(usuario.usuario_pedido_login);
+    pedido.preencherComentarioEFazerPedido(usuario.usuario_pedido_login.comentario);
+    pedido.preencherDetalhesDoPagamento(pagamento.cartao_de_credito);
+    pedido.confirmarPedido();
+    pedido.validarPedidoConfirmado();
   });
 });

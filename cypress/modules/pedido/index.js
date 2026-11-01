@@ -42,7 +42,7 @@ function validarProdutoNoCarrinho(nomeProduto) {
   cy.get(seletores.produtoNoCarrinho).should('be.visible').and('contain', nomeProduto);
 }
 
-function clicarNoBotaoDeCheckout() {
+function seguirParaCheckout() {
   cy.contains(seletores.botaoProceedToCheckout).click();
 }
 
@@ -83,7 +83,7 @@ module.exports = {
   adicionarProdutoAoCarrinho,
   acessarCarrinho,
   validarProdutoNoCarrinho,
-  clicarNoBotaoDeCheckout,
+  seguirParaCheckout,
   validarDetalhesDoEndereco,
   preencherComentarioEFazerPedido,
   preencherDetalhesDoPagamento,

@@ -2,7 +2,7 @@
   "usuario_cadastrado": {
     "email": "thiagocastilho@trabalhofinal.com",
     "senha": "trabalhofinal#123",
-    "nome": "Thiago",
+    "primeiroNome": "Thiago",
     "sobrenome": "Castilho"
   },
   "usuario_nao_cadastrado": {
@@ -30,6 +30,26 @@
     "email": "pedido@trabalhofinal.com",
     "genero": "male",
     "senha": "pedido#123",
+    "dia": "6",
+    "mes": "November",
+    "ano": "1996",
+    "newsletter": false,
+    "specialOffers": false,
+    "empresa": "Empresa de Teste",
+    "endereco": "Rua 1",
+    "pais": "United States",
+    "estado": "California",
+    "cidade": "San Francisco",
+    "cep": "94016",
+    "telefone": "11999999999",
+    "comentario": "Teste de comentario"
+  },
+  "usuario_pedido_login": {
+    "primeiroNome": "Pedido",
+    "sobrenome": "Login",
+    "email": "pedido.login@trabalhofinal.com",
+    "genero": "male",
+    "senha": "pedido.login#123",
     "dia": "6",
     "mes": "November",
     "ano": "1996",

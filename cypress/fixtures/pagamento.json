@@ -1,0 +1,9 @@
+{
+  "cartao_de_credito": {
+    "nome": "Pedido Checkout",
+    "numero": "1234567890123456",
+    "cvc": "123",
+    "mes": "01",
+    "ano": "2030"
+  }
+}

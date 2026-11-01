@@ -23,5 +23,25 @@
     "cidade": "San Francisco",
     "cep": "94016",
     "telefone": "11999999999"
+  },
+  "usuario_pedido": {
+    "primeiroNome": "Pedido",
+    "sobrenome": "Checkout",
+    "email": "pedido@trabalhofinal.com",
+    "genero": "male",
+    "senha": "pedido#123",
+    "dia": "6",
+    "mes": "November",
+    "ano": "1996",
+    "newsletter": false,
+    "specialOffers": false,
+    "empresa": "Empresa de Teste",
+    "endereco": "Rua 1",
+    "pais": "United States",
+    "estado": "California",
+    "cidade": "San Francisco",
+    "cep": "94016",
+    "telefone": "11999999999",
+    "comentario": "Teste de comentario"
   }
 }

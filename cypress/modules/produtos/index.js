@@ -5,6 +5,11 @@ const seletores = {
   detalhesDoProduto: '.product-information',
   inputDePesquisa: '#search_product',
   botaoDePesquisa: '#submit_search',
+  inputAvaliacaoNome: '#name',
+  inputAvaliacaoEmail: '#email',
+  inputAvaliacao: '#review',
+  botaoAvaliacao: '#button-review',
+  alertaSucessoAvaliacao: '#review-section .alert-success.alert'
 }
 
 function acessarPaginaDeProdutos() {
@@ -36,10 +41,23 @@ function validarDetalhesDoPrimeiroProduto(produto) {
   cy.get(seletores.detalhesDoProduto).should('be.visible').and('contain', produto.marca);
 }
 
+function avaliarProduto(usuario) {
+  cy.get(seletores.inputAvaliacaoNome).type(usuario.nome);
+  cy.get(seletores.inputAvaliacaoEmail).type(usuario.email);
+  cy.get(seletores.inputAvaliacao).type(usuario.avaliacao);
+  cy.get(seletores.botaoAvaliacao).click();
+}
+
+function validarSucessoDaAvaliacaoDoProduto() {
+  cy.contains(seletores.alertaSucessoAvaliacao, 'Thank you for your review.').should('be.visible');
+}
+
 module.exports = {
   acessarPaginaDeProdutos,
   visualizarDetalhesDoPrimeiroProduto,
   validarDetalhesDoPrimeiroProduto,
   pesquisarProduto,
   validarResultadoDaPesquisa,
+  avaliarProduto,
+  validarSucessoDaAvaliacaoDoProduto
 }

@@ -63,5 +63,10 @@
     "cep": "94016",
     "telefone": "11999999999",
     "comentario": "Teste de comentario"
+  },
+  "usuario_avaliacao": {
+    "nome": "Usuario Avaliação",
+    "email": "usuario@avaliacao.com",
+    "avaliacao": "Teste de avaliação de produto."
   }
 }
